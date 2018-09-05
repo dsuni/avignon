@@ -1,0 +1,27 @@
+GENERAL INFO:
+Avignon is a board game which aims to be a fully free software version of the tabletop game Carcassonne.
+The current version is only playable on a single local machine, i.e. all the players need to be present
+and take turns - just like with a real board game. This may change in the future.
+
+The game supports 2-6 players, and the current version contains the core of the game, plus the expansions
+river, river II, Inns & cathedrals, Traders & builders and The princess & the dragon.
+
+DEPENDENCIES:
+Avignon requires Qt5 to work. It has been built and tested on GNU/Linux, but there is no reason it
+should not be buildable on other systems that enjoy Qt support.
+
+LICENSE:
+Avignon and all its components is distributed under the GNU GPL v3 (or later). Please see the file
+"COPYING" for the full license.
+
+INSTALLATION:
+In addition to a C++ compatible compiler (such as g++) & toolchain you need the Qt development libraries
+installed. (Specifically you need the core, gui and svg parts.) Once you have these, simply run: "qmake && make".
+
+This should produce a stand-alone executable named "avignon", which you can run. In order to work avignon
+assumes that there is a directory named "graphics", which contain the image files it uses, as well as a
+directory named "decks" which contains the tile information in xml format.
+
+TODO:
+-Documentation for how to create your own playing tiles.
+-Possibly add network option.

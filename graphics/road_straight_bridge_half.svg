@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="road_straight_bridge_half.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   id="svg8"
+   version="1.1"
+   viewBox="-530.746090 179.638350 149.935180 149.935180"
+   height="149.93518"
+   width="149.93518">
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="0"
+     inkscape:window-x="0"
+     inkscape:window-height="1380"
+     inkscape:window-width="2560"
+     showgrid="false"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="3.7476983"
+     inkscape:cx="85.72756"
+     inkscape:zoom="22.627417"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <rect
+       style="opacity:1;fill:#c87137;fill-opacity:1;stroke:#000000;stroke-width:0.18897638;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1606"
+       width="1.1364216"
+       height="7.1973367"
+       x="-249.16068"
+       y="-461.83936"
+       transform="rotate(-89.966827)" />
+    <rect
+       transform="rotate(-90.703936)"
+       y="-465.13092"
+       x="-249.48331"
+       height="7.1973367"
+       width="1.1364216"
+       id="rect1608"
+       style="opacity:1;fill:#c87137;fill-opacity:1;stroke:#000000;stroke-width:0.18897638;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:#c87137;fill-opacity:1;stroke:#000000;stroke-width:0.18897638;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1610"
+       width="1.1364216"
+       height="7.1973367"
+       x="-261.89343"
+       y="-461.58826"
+       transform="rotate(-89.912748)" />
+    <path
+       style="fill:#e9ddaf;fill-opacity:1;stroke:#000000;stroke-width:0.21102841;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -458.25996,216.35257 c 0,0 1.27299,4.93284 -1.19239,14.4787 -3.0093,11.65189 -8.82273,15.65972 -8.28634,26.91656 0.38733,8.1285 6.1674,16.4445 7.45219,24.08751 0.30849,1.83514 -0.11613,50.0185 -0.11613,50.0185 l 9.18944,-0.23264 c 0,0 0.43647,-44.09088 -0.17857,-48.61195 -1.60958,-11.83184 -7.48372,-14.45959 -7.71187,-26.27561 -0.18365,-9.51101 4.77666,-11.90769 7.91034,-24.62587 2.5076,-10.17722 1.89032,-16.33681 1.89032,-16.33681 z"
+       id="path4541"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssccssscc" />
+  </g>
+</svg>

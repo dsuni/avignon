@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<deck>
+	<!-- River spring (starting tile) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/river_spring.svg" />
+		<subtile position="0" terrain="field" />
+		<subtile position="1" terrain="field" />
+		<subtile position="2" terrain="field" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="field" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="river" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="field" />
+		<subtile position="10" terrain="field" />
+		<subtile position="11" terrain="field" />
+		<subtile position="12" terrain="river" />
+		<subtile position="13" terrain="river" />
+		<subtile position="14" terrain="river" />
+		<subtile position="15" terrain="river" />
+		<!-- River -->
+		<connection from="12" to="13" />
+		<connection from="13" to="15" />
+		<connection from="15" to="14" />
+		<connection from="14" to="7" />
+		<!-- Field -->
+		<connection from="8" to="9" />
+		<connection from="9" to="10" />
+		<connection from="10" to="11" />
+		<connection from="11" to="0" />
+		<connection from="0" to="1" />
+		<connection from="1" to="2" />
+		<connection from="2" to="3" />
+		<connection from="3" to="4" />
+		<connection from="4" to="5" />
+		<connection from="5" to="6" />
+	</tile>
+	<!-- Straight river tile (N-S) (1/2) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/river_straight.svg" />
+		<subtile position="0" terrain="field" />
+		<subtile position="1" terrain="river" />
+		<subtile position="2" terrain="field" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="field" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="river" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="field" />
+		<subtile position="10" terrain="field" />
+		<subtile position="11" terrain="field" />
+		<subtile position="12" terrain="river" />
+		<subtile position="13" terrain="field" />
+		<subtile position="14" terrain="river" />
+		<subtile position="15" terrain="field" />
+		<!-- River -->
+		<connection from="1" to="12" />
+		<connection from="12" to="14" />
+		<connection from="14" to="7" />
+		<!-- East field -->
+		<connection from="0" to="11" />
+		<connection from="11" to="10" />
+		<connection from="10" to="15" />
+		<connection from="10" to="9" />
+		<connection from="9" to="8" />
+		<!-- West field -->
+		<connection from="2" to="3" />
+		<connection from="3" to="4" />
+		<connection from="4" to="13" />
+		<connection from="4" to="5" />
+		<connection from="5" to="6" />
+	</tile>
+	<!-- Straight river tile (N-S) (2/2) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/river_straight.svg" />
+		<subtile position="0" terrain="field" />
+		<subtile position="1" terrain="river" />
+		<subtile position="2" terrain="field" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="field" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="river" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="field" />
+		<subtile position="10" terrain="field" />
+		<subtile position="11" terrain="field" />
+		<subtile position="12" terrain="river" />
+		<subtile position="13" terrain="field" />
+		<subtile position="14" terrain="river" />
+		<subtile position="15" terrain="field" />
+		<!-- River -->
+		<connection from="1" to="12" />
+		<connection from="12" to="14" />
+		<connection from="14" to="7" />
+		<!-- East field -->
+		<connection from="0" to="11" />
+		<connection from="11" to="10" />
+		<connection from="10" to="15" />
+		<connection from="10" to="9" />
+		<connection from="9" to="8" />
+		<!-- West field -->
+		<connection from="2" to="3" />
+		<connection from="3" to="4" />
+		<connection from="4" to="13" />
+		<connection from="4" to="5" />
+		<connection from="5" to="6" />
+	</tile>
+	<!-- Straight river with bridge across (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/river_straight.svg" />
+		<graphics img="graphics/road_straight_bridge.svg" rotation="1"/>
+		<subtile position="0" terrain="field" />
+		<subtile position="1" terrain="river" />
+		<subtile position="2" terrain="field" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="road" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="river" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="field" />
+		<subtile position="10" terrain="road" />
+		<subtile position="11" terrain="field" />
+		<subtile position="12" terrain="river" />
+		<subtile position="13" terrain="road" />
+		<subtile position="14" terrain="river" />
+		<subtile position="15" terrain="road" />
+		<!-- River -->
+		<connection from="1" to="12" />
+		<connection from="12" to="14" />
+		<connection from="14" to="7" />
+		<!-- Road -->
+		<connection from="10" to="15" />
+		<connection from="15" to="13" />
+		<connection from="13" to="4" />
+		<!-- NW field -->
+		<connection from="0" to="11" />
+		<!-- SW field -->
+		<connection from="8" to="9" />
+		<!-- SE field -->
+		<connection from="5" to="6" />
+		<!-- NE field -->
+		<connection from="2" to="3" />
+	</tile>
+	<!-- Straight (N-S) river with two quarter cities (E & W) (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/river_straight.svg" />
+		<graphics img="graphics/city_quarter.svg" rotation="1"/>
+		<graphics img="graphics/city_quarter.svg" rotation="3"/>
+		<subtile position="0" terrain="field" />
+		<subtile position="1" terrain="river" />
+		<subtile position="2" terrain="field" />
+		<subtile position="3" terrain="city" />
+		<subtile position="4" terrain="city" />
+		<subtile position="5" terrain="city" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="river" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="city" />
+		<subtile position="10" terrain="city" />
+		<subtile position="11" terrain="city" />
+		<subtile position="12" terrain="river" />
+		<subtile position="13" terrain="field" />
+		<subtile position="14" terrain="river" />
+		<subtile position="15" terrain="field" />
+		<!-- River -->
+		<connection from="1" to="12" />
+		<connection from="12" to="14" />
+		<connection from="14" to="7" />
+		<!-- East city -->
+		<connection from="3" to="4" />
+		<connection from="4" to="5" />
+		<!-- West city -->
+		<connection from="9" to="10" />
+		<connection from="10" to="11" />
+		<!-- East field -->
+		<connection from="2" to="13" />
+		<connection from="13" to="6" />
+		<!-- West field -->
+		<connection from="8" to="15" />
+		<connection from="15" to="0" />
+	</tile>
+	<!-- Straight (N-S) river with one quarter city (W) with road (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/river_straight.svg" />
+		<graphics img="graphics/road_straight_bridge.svg" rotation="1"/>
+		<graphics img="graphics/city_quarter.svg" rotation="3"/>
+		<subtile position="0" terrain="field" />
+		<subtile position="1" terrain="river" />
+		<subtile position="2" terrain="field" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="road" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="river" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="city" />
+		<subtile position="10" terrain="city" />
+		<subtile position="11" terrain="city" />
+		<subtile position="12" terrain="river" />
+		<subtile position="13" terrain="road" />
+		<subtile position="14" terrain="river" />
+		<subtile position="15" terrain="road" addon="intersection" />
+		<!-- River -->
+		<connection from="1" to="12" />
+		<connection from="12" to="14" />
+		<connection from="14" to="7" />
+		<!-- Road -->
+		<connection from="4" to="13" />
+		<connection from="13" to="15" />
+		<!-- City -->
+		<connection from="9" to="10" />
+		<connection from="10" to="11" />
+		<!-- NE field -->
+		<connection from="2" to="3" />
+		<!-- SE field -->
+		<connection from="5" to="6" />
+	</tile>
+	<!-- River bend (W-S) (1/2) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/river_bend_left.svg" />
+		<subtile position="0" terrain="field" />
+		<subtile position="1" terrain="field" />
+		<subtile position="2" terrain="field" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="field" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="river" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="field" />
+		<subtile position="10" terrain="river" />
+		<subtile position="11" terrain="field" />
+		<subtile position="12" terrain="field" />
+		<subtile position="13" terrain="field" />
+		<subtile position="14" terrain="river" />
+		<subtile position="15" terrain="river" />
+		<!-- River -->
+		<connection from="10" to="15" />
+		<connection from="15" to="14" />
+		<connection from="14" to="7" />
+		<!-- SW field -->
+		<connection from="8" to="9" />
+		<!-- Big field -->
+		<connection from="11" to="0" />
+		<connection from="0" to="1" />
+		<connection from="1" to="12" />
+		<connection from="1" to="2" />
+		<connection from="2" to="3" />
+		<connection from="3" to="4" />
+		<connection from="4" to="13" />
+		<connection from="4" to="5" />
+		<connection from="5" to="6" />
+	</tile>
+	<!-- River bend (W-S) (2/2) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/river_bend_left.svg" />
+		<subtile position="0" terrain="field" />
+		<subtile position="1" terrain="field" />
+		<subtile position="2" terrain="field" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="field" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="river" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="field" />
+		<subtile position="10" terrain="river" />
+		<subtile position="11" terrain="field" />
+		<subtile position="12" terrain="field" />
+		<subtile position="13" terrain="field" />
+		<subtile position="14" terrain="river" />
+		<subtile position="15" terrain="river" />
+		<!-- River -->
+		<connection from="10" to="15" />
+		<connection from="15" to="14" />
+		<connection from="14" to="7" />
+		<!-- SW field -->
+		<connection from="8" to="9" />
+		<!-- Big field -->
+		<connection from="11" to="0" />
+		<connection from="0" to="1" />
+		<connection from="1" to="12" />
+		<connection from="1" to="2" />
+		<connection from="2" to="3" />
+		<connection from="3" to="4" />
+		<connection from="4" to="13" />
+		<connection from="4" to="5" />
+		<connection from="5" to="6" />
+	</tile>
+	<!-- River bend (W-S) with road (N-E) (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/river_bend_left.svg" />
+		<graphics img="graphics/road_bend_left.svg" rotation="2" />
+		<subtile position="0" terrain="field" />
+		<subtile position="1" terrain="road" />
+		<subtile position="2" terrain="field" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="road" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="river" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="field" />
+		<subtile position="10" terrain="river" />
+		<subtile position="11" terrain="field" />
+		<subtile position="12" terrain="field" />
+		<subtile position="13" terrain="field" />
+		<subtile position="14" terrain="river" />
+		<subtile position="15" terrain="river" />
+		<!-- River -->
+		<connection from="10" to="15" />
+		<connection from="15" to="14" />
+		<connection from="14" to="7" />
+		<!-- Road -->
+		<connection from="1" to="4" />
+		<!-- SW field -->
+		<connection from="8" to="9" />
+		<!-- NE field -->
+		<connection from="2" to="3" />
+		<!-- Middle field -->
+		<connection from="11" to="0" />
+		<connection from="0" to="12" />
+		<connection from="12" to="13" />
+		<connection from="13" to="5" />
+		<connection from="5" to="6" />
+	</tile>
+	<!-- River bend (S-E) with half city (N-E) (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/river_bend_left.svg" rotation="3" />
+		<graphics img="graphics/city_half.svg" />
+		<subtile position="0" terrain="city" />
+		<subtile position="1" terrain="city" />
+		<subtile position="2" terrain="city" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="river" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="river" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="city" />
+		<subtile position="10" terrain="city" />
+		<subtile position="11" terrain="city" />
+		<subtile position="12" terrain="field" />
+		<subtile position="13" terrain="river" />
+		<subtile position="14" terrain="river" />
+		<subtile position="15" terrain="field" />
+		<!-- River -->
+		<connection from="4" to="13" />
+		<connection from="13" to="14" />
+		<connection from="14" to="7" />
+		<!-- City -->
+		<connection from="9" to="10" />
+		<connection from="10" to="11" />
+		<connection from="11" to="0" />
+		<connection from="0" to="1" />
+		<connection from="1" to="2" />
+		<!-- SE field -->
+		<connection from="5" to="6" />
+		<!-- Middle field -->
+		<connection from="3" to="12" />
+		<connection from="12" to="15" />
+		<connection from="15" to="8" />
+	</tile>
+	<!-- Straight river (E-W) with Monastery (N) with road (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/river_straight.svg" rotation="1" />
+		<graphics img="graphics/road_straight_bridge_half.svg" />
+		<graphics img="graphics/monastery.svg" scale="30%" position="150,50" />
+		<subtile position="0" terrain="field" />
+		<subtile position="1" terrain="field" addon="monastery" />
+		<subtile position="2" terrain="field" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="river" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="road" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="field" />
+		<subtile position="10" terrain="river" />
+		<subtile position="11" terrain="field" />
+		<subtile position="12" terrain="field" addon="monastery" />
+		<subtile position="13" terrain="river" />
+		<subtile position="14" terrain="road" addon="intersection" />
+		<subtile position="15" terrain="river" />
+		<!-- River -->
+		<connection from="4" to="13" />
+		<connection from="13" to="15" />
+		<connection from="15" to="10" />
+		<!-- North field -->
+		<connection from="11" to="0" />
+		<connection from="0" to="2" />
+		<connection from="2" to="3" />
+		<!-- Monastery -->
+		<connection from="1" to="12" />
+		<!-- SW field -->
+		<connection from="8" to="9" />
+		<!-- SE field -->
+		<connection from="5" to="6" />
+		<!-- Road -->
+		<connection from="7" to="14" />
+	</tile>
+	<!-- River with lake. (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/river_lake.svg" />
+		<subtile position="0" terrain="field" />
+		<subtile position="1" terrain="river" />
+		<subtile position="2" terrain="field" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="field" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="field" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="field" />
+		<subtile position="10" terrain="field" />
+		<subtile position="11" terrain="field" />
+		<subtile position="12" terrain="river" />
+		<subtile position="13" terrain="river" />
+		<subtile position="14" terrain="river" />
+		<subtile position="15" terrain="river" />
+		<!-- River/Lake -->
+		<connection from="1" to="12" />
+		<connection from="12" to="13" />
+		<connection from="13" to="14" />
+		<connection from="14" to="15" />
+		<!-- Field -->
+		<connection from="0" to="11" />
+		<connection from="11" to="10" />
+		<connection from="10" to="9" />
+		<connection from="9" to="8" />
+		<connection from="8" to="7" />
+		<connection from="7" to="6" />
+		<connection from="6" to="5" />
+		<connection from="5" to="4" />
+		<connection from="4" to="3" />
+		<connection from="3" to="2" />
+	</tile>	
+</deck>

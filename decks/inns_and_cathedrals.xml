@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<deck>
+	<!-- Cathedral (1/2) -->
+	<tile>
+		<graphics img="graphics/city_ground.svg" />
+		<graphics img="graphics/cathedral.svg" scale="80%" position="50,50" />
+		<subtile position="0" terrain="city" />
+		<subtile position="1" terrain="city" />
+		<subtile position="2" terrain="city" />
+		<subtile position="3" terrain="city" />
+		<subtile position="4" terrain="city" />
+		<subtile position="5" terrain="city" />
+		<subtile position="6" terrain="city" />
+		<subtile position="7" terrain="city" />
+		<subtile position="8" terrain="city" />
+		<subtile position="9" terrain="city" />
+		<subtile position="10" terrain="city" />
+		<subtile position="11" terrain="city" />
+		<subtile position="12" terrain="city" addon="cathedral" />
+		<subtile position="13" terrain="city" />
+		<subtile position="14" terrain="city" />
+		<subtile position="15" terrain="city" />
+		<!-- Whole city -->
+		<connection from="0" to="1" />
+		<connection from="1" to="2" />
+		<connection from="1" to="12" />
+		<connection from="2" to="3" />
+		<connection from="3" to="4" />
+		<connection from="4" to="5" />
+		<connection from="4" to="13" />
+		<connection from="5" to="6" />
+		<connection from="6" to="7" />
+		<connection from="7" to="8" />
+		<connection from="7" to="14" />
+		<connection from="8" to="9" />
+		<connection from="9" to="10" />
+		<connection from="10" to="11" />
+		<connection from="10" to="15" />
+	</tile>
+	<!-- Cathedral (2/2) -->
+	<tile>
+		<graphics img="graphics/city_ground.svg" />
+		<graphics img="graphics/cathedral.svg" scale="80%" position="50,50" />
+		<subtile position="0" terrain="city" />
+		<subtile position="1" terrain="city" />
+		<subtile position="2" terrain="city" />
+		<subtile position="3" terrain="city" />
+		<subtile position="4" terrain="city" />
+		<subtile position="5" terrain="city" />
+		<subtile position="6" terrain="city" />
+		<subtile position="7" terrain="city" />
+		<subtile position="8" terrain="city" />
+		<subtile position="9" terrain="city" />
+		<subtile position="10" terrain="city" />
+		<subtile position="11" terrain="city" />
+		<subtile position="12" terrain="city" addon="cathedral" />
+		<subtile position="13" terrain="city" />
+		<subtile position="14" terrain="city" />
+		<subtile position="15" terrain="city" />
+		<!-- Whole city -->
+		<connection from="0" to="1" />
+		<connection from="1" to="2" />
+		<connection from="1" to="12" />
+		<connection from="2" to="3" />
+		<connection from="3" to="4" />
+		<connection from="4" to="5" />
+		<connection from="4" to="13" />
+		<connection from="5" to="6" />
+		<connection from="6" to="7" />
+		<connection from="7" to="8" />
+		<connection from="7" to="14" />
+		<connection from="8" to="9" />
+		<connection from="9" to="10" />
+		<connection from="10" to="11" />
+		<connection from="10" to="15" />
+	</tile>
+	<!-- Half city with shield (N-W) and quarter city (S) (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/city_half.svg" />
+		<graphics img="graphics/city_quarter.svg" rotation="2" />
+		<graphics img="graphics/shield.svg" scale="10%" position="20,20" />
+		<subtile position="0" terrain="city" addon="shield" />
+		<subtile position="1" terrain="city" />
+		<subtile position="2" terrain="city" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="field" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="city" />
+		<subtile position="7" terrain="city" />
+		<subtile position="8" terrain="city" />
+		<subtile position="9" terrain="city" />
+		<subtile position="10" terrain="city" />
+		<subtile position="11" terrain="city" />
+		<subtile position="12" terrain="field" />
+		<subtile position="13" terrain="field" />
+		<subtile position="14" terrain="field" />
+		<subtile position="15" terrain="field" />
+		<!-- Field -->
+		<connection from="3" to="4" />
+		<connection from="4" to="5" />
+		<connection from="4" to="13" />
+		<connection from="13" to="12" />
+		<connection from="12" to="15" />
+		<connection from="15" to="14" />
+		<!-- NW city -->
+		<connection from="2" to="1" />
+		<connection from="1" to="0" />
+		<connection from="0" to="11" />
+		<connection from="11" to="10" />
+		<connection from="10" to="9" />
+		<!-- S city -->
+		<connection from="6" to="7" />
+		<connection from="7" to="8" />
+	</tile>
+	<!-- Four quarter cities with field in the middle (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/city_quarter.svg" />
+		<graphics img="graphics/city_quarter.svg" rotation="1" />
+		<graphics img="graphics/city_quarter.svg" rotation="2" />
+		<graphics img="graphics/city_quarter.svg" rotation="3" />
+		<subtile position="0" terrain="city" />
+		<subtile position="1" terrain="city" />
+		<subtile position="2" terrain="city" />
+		<subtile position="3" terrain="city" />
+		<subtile position="4" terrain="city" />
+		<subtile position="5" terrain="city" />
+		<subtile position="6" terrain="city" />
+		<subtile position="7" terrain="city" />
+		<subtile position="8" terrain="city" />
+		<subtile position="9" terrain="city" />
+		<subtile position="10" terrain="city" />
+		<subtile position="11" terrain="city" />
+		<subtile position="12" terrain="field" />
+		<subtile position="13" terrain="field" />
+		<subtile position="14" terrain="field" />
+		<subtile position="15" terrain="field" />
+		<!-- N city -->
+		<connection from="0" to="1" />
+		<connection from="1" to="2" />
+		<!-- E city -->
+		<connection from="3" to="4" />
+		<connection from="4" to="5" />
+		<!-- S city -->
+		<connection from="6" to="7" />
+		<connection from="7" to="8" />
+		<!-- E city -->
+		<connection from="9" to="10" />
+		<connection from="10" to="11" />
+		<!-- Field -->
+		<connection from="12" to="13" />
+		<connection from="13" to="14" />
+		<connection from="14" to="15" />
+	</tile>
+	<!-- Quarter city (N) with road (N-S) (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/road_straight.svg" />
+		<graphics img="graphics/city_quarter.svg" />
+		<subtile position="0" terrain="city" />
+		<subtile position="1" terrain="city" />
+		<subtile position="2" terrain="city" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="field" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="road" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="field" />
+		<subtile position="10" terrain="field" />
+		<subtile position="11" terrain="field" />
+		<subtile position="12" terrain="road" addon="intersection" />
+		<subtile position="13" terrain="field" />
+		<subtile position="14" terrain="road" />
+		<subtile position="15" terrain="field" />
+		<!-- E field -->
+		<connection from="3" to="4" />
+		<connection from="4" to="5" />
+		<connection from="4" to="13" />
+		<connection from="5" to="6" />
+		<!-- W field  -->
+		<connection from="11" to="10" />
+		<connection from="10" to="9" />
+		<connection from="10" to="15" />
+		<connection from="9" to="8" />
+		<!-- City -->
+		<connection from="0" to="1" />
+		<connection from="1" to="2" />
+		<!-- Road -->
+		<connection from="7" to="14" />
+		<connection from="14" to="12" />
+	</tile>
+	<!-- Quarter city (N) with road (N-E) (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/road_bend_left.svg" rotation="2" />
+		<graphics img="graphics/city_quarter.svg" />
+		<subtile position="0" terrain="city" />
+		<subtile position="1" terrain="city" />
+		<subtile position="2" terrain="city" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="road" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="field" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="field" />
+		<subtile position="10" terrain="field" />
+		<subtile position="11" terrain="field" />
+		<subtile position="12" terrain="road" addon="intersection" />
+		<subtile position="13" terrain="road" />
+		<subtile position="14" terrain="field" />
+		<subtile position="15" terrain="field" />
+		<!-- SW field -->
+		<connection from="5" to="6" />
+		<connection from="6" to="7" />
+		<connection from="7" to="8" />
+		<connection from="7" to="14" />
+		<connection from="8" to="9" />
+		<connection from="9" to="10" />
+		<connection from="10" to="11" />
+		<connection from="10" to="15" />
+		<!-- City -->
+		<connection from="0" to="1" />
+		<connection from="1" to="2" />
+		<!-- Road -->
+		<connection from="4" to="13" />
+		<connection from="13" to="12" />
+	</tile>
+	<!-- Half city tunnel (W-E) with shield and roads N & S (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/road_straight.svg" />
+		<graphics img="graphics/city_half_tunnel.svg" />
+		<graphics img="graphics/shield.svg" scale="10%" position="350,170" />
+		<subtile position="0" terrain="field" />
+		<subtile position="1" terrain="road" addon="intersection" />
+		<subtile position="2" terrain="field" />
+		<subtile position="3" terrain="city" />
+		<subtile position="4" terrain="city" addon="shield" />
+		<subtile position="5" terrain="city" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="road" addon="intersection" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="city" />
+		<subtile position="10" terrain="city" />
+		<subtile position="11" terrain="city" />
+		<subtile position="12" terrain="city" />
+		<subtile position="13" terrain="city" />
+		<subtile position="14" terrain="city" />
+		<subtile position="15" terrain="city" />
+		<!-- City -->
+		<connection from="3" to="4" />
+		<connection from="4" to="5" />
+		<connection from="4" to="13" />
+		<connection from="13" to="14" />
+		<connection from="13" to="12" />
+		<connection from="12" to="15" />
+		<connection from="15" to="10" />
+		<connection from="10" to="11" />
+		<connection from="10" to="9" />
+	</tile>
+	<!-- Three quarter cities (W, N, E) with field in the middle (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/city_quarter.svg" />
+		<graphics img="graphics/city_quarter.svg" rotation="1" />
+		<graphics img="graphics/city_quarter.svg" rotation="3" />
+		<subtile position="0" terrain="city" />
+		<subtile position="1" terrain="city" />
+		<subtile position="2" terrain="city" />
+		<subtile position="3" terrain="city" />
+		<subtile position="4" terrain="city" />
+		<subtile position="5" terrain="city" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="field" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="city" />
+		<subtile position="10" terrain="city" />
+		<subtile position="11" terrain="city" />
+		<subtile position="12" terrain="field" />
+		<subtile position="13" terrain="field" />
+		<subtile position="14" terrain="field" />
+		<subtile position="15" terrain="field" />
+		<!-- N city -->
+		<connection from="0" to="1" />
+		<connection from="1" to="2" />
+		<!-- E city -->
+		<connection from="3" to="4" />
+		<connection from="4" to="5" />
+		<!-- E city -->
+		<connection from="9" to="10" />
+		<connection from="10" to="11" />
+		<!-- Field -->
+		<connection from="6" to="7" />
+		<connection from="7" to="8" />
+		<connection from="7" to="14" />
+		<connection from="12" to="13" />
+		<connection from="13" to="14" />
+		<connection from="14" to="15" />
+	</tile>
+	<!-- Two road bends W-S & N-E with field in the middle (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/road_bend_left.svg" />
+		<graphics img="graphics/road_bend_left.svg" rotation="2" />
+		<subtile position="0" terrain="field" />
+		<subtile position="1" terrain="road" />
+		<subtile position="2" terrain="field" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="road" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="road" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="field" />
+		<subtile position="10" terrain="road" />
+		<subtile position="11" terrain="field" />
+		<subtile position="12" terrain="field" />
+		<subtile position="13" terrain="field" />
+		<subtile position="14" terrain="field" />
+		<subtile position="15" terrain="field" />
+		<!-- N-E road -->
+		<connection from="1" to="4" />
+		<!-- S-W road -->
+		<connection from="7" to="10" />
+		<!-- NE field -->
+		<connection from="2" to="3" />
+		<!-- SW field -->
+		<connection from="8" to="9" />
+		<!-- Middle field -->
+		<connection from="0" to="11" />
+		<connection from="11" to="12" />
+		<connection from="12" to="13" />
+		<connection from="13" to="14" />
+		<connection from="14" to="15" />
+		<connection from="14" to="5" />
+		<connection from="5" to="6" />
+	</tile>
+	<!-- Two quarter cities (E & W) with road crossing between (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/road_straight.svg" rotation="1" />
+		<graphics img="graphics/road_straight.svg" />
+		<graphics img="graphics/city_quarter.svg" rotation="1" />
+		<graphics img="graphics/city_quarter.svg" rotation="3" />
+		<graphics img="graphics/barn.svg" scale="15%" position="170,165" />
+		<subtile position="0" terrain="field" />
+		<subtile position="1" terrain="road" />
+		<subtile position="2" terrain="field" />
+		<subtile position="3" terrain="city" />
+		<subtile position="4" terrain="city" />
+		<subtile position="5" terrain="city" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="road" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="city" />
+		<subtile position="10" terrain="city" />
+		<subtile position="11" terrain="city" />
+		<subtile position="12" terrain="road" addon="intersection" />
+		<subtile position="13" terrain="city" />
+		<subtile position="14" terrain="road" addon="intersection" />
+		<subtile position="15" terrain="city" />
+		<!-- E city -->
+		<connection from="3" to="4" />
+		<connection from="4" to="5" />
+		<connection from="4" to="13" /> <!-- Part of the city in order to not let people add followers to the tiny (disallowed) roads -->
+		<!-- W city -->
+		<connection from="9" to="10" />
+		<connection from="10" to="11" />
+		<connection from="10" to="15" /> <!-- See above -->
+		<!-- N road -->
+		<connection from="1" to="12" />
+		<!-- S road -->
+		<connection from="7" to="14" />
+	</tile>
+	<!-- Straight road (E-W) with inn (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/road_straight.svg" rotation="1" />
+		<graphics img="graphics/inn.svg" scale="25%" position="100,80" />
+		<subtile position="0" terrain="field" />
+		<subtile position="1" terrain="field" />
+		<subtile position="2" terrain="field" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="road" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="field" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="field" />
+		<subtile position="10" terrain="road" />
+		<subtile position="11" terrain="field" />
+		<subtile position="12" terrain="field" />
+		<subtile position="13" terrain="road" />
+		<subtile position="14" terrain="field" />
+		<subtile position="15" terrain="road" addon="inn" />
+		<!-- Road -->
+		<connection from="4" to="13" />
+		<connection from="13" to="15" />
+		<connection from="15" to="10" />
+		<!-- N field -->
+		<connection from="11" to="0" />
+		<connection from="0" to="1" />
+		<connection from="1" to="12" />
+		<connection from="1" to="2" />
+		<connection from="2" to="3" />
+		<!-- S field -->
+		<connection from="5" to="6" />
+		<connection from="6" to="7" />
+		<connection from="7" to="14" />
+		<connection from="7" to="8" />
+		<connection from="8" to="9" />
+	</tile>
+	<!-- Curved road (S-W) with inn (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/road_bend_left.svg" />
+		<graphics img="graphics/inn.svg" scale="25%" position="170,120" />
+		<subtile position="0" terrain="field" />
+		<subtile position="1" terrain="field" />
+		<subtile position="2" terrain="field" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="field" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="road" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="field" />
+		<subtile position="10" terrain="road" />
+		<subtile position="11" terrain="field" />
+		<subtile position="12" terrain="field" />
+		<subtile position="13" terrain="field" />
+		<subtile position="14" terrain="road" />
+		<subtile position="15" terrain="road" addon="inn" />
+		<!-- Road -->
+		<connection from="7" to="14" />
+		<connection from="14" to="15" />
+		<connection from="15" to="10" />
+		<!-- SW field -->
+		<connection from="8" to="9" />
+		<!-- NE field -->
+		<connection from="11" to="0" />
+		<connection from="0" to="1" />
+		<connection from="1" to="12" />
+		<connection from="1" to="2" />
+		<connection from="2" to="3" />
+		<connection from="3" to="4" />
+		<connection from="4" to="5" />
+		<connection from="4" to="13" />
+		<connection from="5" to="6" />
+	</tile>
+	<!-- Crossroads (W-S-E) with inn (E) (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/road_straight.svg" rotation="1" />
+		<graphics img="graphics/road_straight_half.svg" />
+		<graphics img="graphics/inn.svg" scale="25%" position="250,90" />
+		<subtile position="0" terrain="field" />
+		<subtile position="1" terrain="field" />
+		<subtile position="2" terrain="field" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="road" addon="inn" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="road" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="field" />
+		<subtile position="10" terrain="road" />
+		<subtile position="11" terrain="field" />
+		<subtile position="12" terrain="field" />
+		<subtile position="13" terrain="road" addon="intersection" />
+		<subtile position="14" terrain="road" addon="intersection" />
+		<subtile position="15" terrain="road" addon="intersection" />
+		<!-- North field -->
+		<connection from="0" to="1" />
+		<connection from="0" to="11" />
+		<connection from="1" to="2" />
+		<connection from="1" to="12" />
+		<connection from="2" to="3" />
+		<!-- East road -->
+		<connection from="4" to="13" />
+		<!-- South road -->
+		<connection from="7" to="14" />
+		<!-- West road -->
+		<connection from="10" to="15" />
+		<!-- SE field -->
+		<connection from="5" to="6" />
+		<!-- SW field -->
+		<connection from="8" to="9" />
+	</tile>
+	<!-- Quarter city (N) and curved road (S-W) with inn (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/city_quarter.svg" />
+		<graphics img="graphics/road_bend_left.svg" />
+		<graphics img="graphics/inn.svg" scale="25%" position="170,120" />
+		<subtile position="0" terrain="city" />
+		<subtile position="1" terrain="city" />
+		<subtile position="2" terrain="city" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="field" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="road" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="field" />
+		<subtile position="10" terrain="road" />
+		<subtile position="11" terrain="field" />
+		<subtile position="12" terrain="field" />
+		<subtile position="13" terrain="field" />
+		<subtile position="14" terrain="road" />
+		<subtile position="15" terrain="road" addon="inn" />
+		<!-- Road -->
+		<connection from="7" to="14" />
+		<connection from="14" to="15" />
+		<connection from="15" to="10" />
+		<!-- SW field -->
+		<connection from="8" to="9" />
+		<!-- City -->
+		<connection from="0" to="1" />
+		<connection from="1" to="2" />	
+		<!-- NE field -->
+		<connection from="11" to="12" />
+		<connection from="12" to="13" />
+		<connection from="3" to="4" />
+		<connection from="4" to="5" />
+		<connection from="4" to="13" />
+		<connection from="5" to="6" />
+	</tile>
+	<!-- Half city (N-W) and curved road (S-W) with inn (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/road_bend_left.svg" />
+		<graphics img="graphics/city_half.svg" />
+		<graphics img="graphics/inn.svg" scale="25%" position="220,250" />
+		<subtile position="0" terrain="city" />
+		<subtile position="1" terrain="city" />
+		<subtile position="2" terrain="city" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="field" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="road" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="city" />
+		<subtile position="10" terrain="city" />
+		<subtile position="11" terrain="city" />
+		<subtile position="12" terrain="field" />
+		<subtile position="13" terrain="field" />
+		<subtile position="14" terrain="road" addon="inn" />
+		<subtile position="15" terrain="road" addon="intersection" />
+		<!-- Road -->
+		<connection from="7" to="14" />
+		<connection from="14" to="15" />
+		<!-- City -->
+		<connection from="9" to="10" />
+		<connection from="10" to="11" />
+		<connection from="11" to="0" />
+		<connection from="0" to="1" />
+		<connection from="1" to="2" />
+		<!-- SE field -->
+		<connection from="3" to="4" />
+		<connection from="4" to="13" />
+		<connection from="13" to="12" />
+		<connection from="4" to="5" />
+		<connection from="5" to="6" />
+	</tile>
+	<!-- Half city (N-W) with shield and curved road (S-E) with inn (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/road_bend_left.svg" rotation="3" />
+		<graphics img="graphics/city_half.svg" />
+		<graphics img="graphics/inn.svg" scale="20%" position="280,100" />
+		<graphics img="graphics/shield.svg" scale="10%" position="20,20" />
+		<subtile position="0" terrain="city" addon="shield" />
+		<subtile position="1" terrain="city" />
+		<subtile position="2" terrain="city" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="road" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="road" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="city" />
+		<subtile position="10" terrain="city" />
+		<subtile position="11" terrain="city" />
+		<subtile position="12" terrain="field" />
+		<subtile position="13" terrain="road" addon="inn" />
+		<subtile position="14" terrain="road" />
+		<subtile position="15" terrain="field" />
+		<!-- Road -->
+		<connection from="7" to="14" />
+		<connection from="14" to="13" />
+		<connection from="13" to="4" />
+		<!-- City -->
+		<connection from="9" to="10" />
+		<connection from="10" to="11" />
+		<connection from="11" to="0" />
+		<connection from="0" to="1" />
+		<connection from="1" to="2" />
+		<!-- SE field -->
+		<connection from="5" to="6" />
+		<!-- Middle field -->
+		<connection from="8" to="15" />
+		<connection from="15" to="12" />
+		<connection from="12" to="3" />
+	</tile>
+	<!-- "Claw" shaped half city (W - NE) (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/city_claw.svg" />
+		<subtile position="0" terrain="field" />
+		<subtile position="1" terrain="field" />
+		<subtile position="2" terrain="field" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="field" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="field" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="city" />
+		<subtile position="10" terrain="city" />
+		<subtile position="11" terrain="city" />
+		<subtile position="12" terrain="city" />
+		<subtile position="13" terrain="city" />
+		<subtile position="14" terrain="city" />
+		<subtile position="15" terrain="city" />
+		<!-- City -->
+		<connection from="9" to="10" />
+		<connection from="10" to="11" />
+		<connection from="10" to="15" />
+		<connection from="15" to="12" />
+		<connection from="15" to="14" />
+		<connection from="14" to="13" />
+		<!-- N field -->
+		<connection from="0" to="1" />
+		<connection from="1" to="2" />
+		<!-- SE field -->
+		<connection from="3" to="4" />
+		<connection from="4" to="5" />
+		<connection from="5" to="6" />
+		<connection from="6" to="7" />
+		<connection from="7" to="8" />
+	</tile>
+	<!-- Monastery with road (E-W) (1/1) -->
+	<tile>
+		<graphics img="graphics/grass.svg" stationary="true" />
+		<graphics img="graphics/road_straight.svg" rotation="1" />
+		<graphics img="graphics/monastery.svg" scale="40%" position="125,100" />
+		<subtile position="0" terrain="field" />
+		<subtile position="1" terrain="field" />
+		<subtile position="2" terrain="field" />
+		<subtile position="3" terrain="field" />
+		<subtile position="4" terrain="road" addon="intersection" />
+		<subtile position="5" terrain="field" />
+		<subtile position="6" terrain="field" />
+		<subtile position="7" terrain="field" />
+		<subtile position="8" terrain="field" />
+		<subtile position="9" terrain="field" />
+		<subtile position="10" terrain="road" addon="intersection" />
+		<subtile position="11" terrain="field" />
+		<subtile position="12" terrain="field" addon="monastery" />
+		<subtile position="13" terrain="field" addon="monastery" />
+		<subtile position="14" terrain="field" addon="monastery" />
+		<subtile position="15" terrain="field" addon="monastery" />
+		<!-- N field -->
+		<connection from="11" to="0" />
+		<connection from="0" to="1" />
+		<connection from="1" to="2" />
+		<connection from="2" to="3" />
+		<!-- S field -->
+		<connection from="9" to="8" />
+		<connection from="8" to="7" />
+		<connection from="7" to="6" />
+		<connection from="6" to="5" />
+		<!-- Monastery -->
+		<connection from="12" to="13" />
+		<connection from="13" to="14" />
+		<connection from="14" to="15" />
+	</tile>
+</deck>

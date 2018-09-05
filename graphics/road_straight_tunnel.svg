@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="39.6875"
+   height="39.6875"
+   viewBox="-242.660720 0.666667 39.687500 39.687500"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="road_straight_tunnel.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="128"
+     inkscape:cx="19.342745"
+     inkscape:cy="2.9471195"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="2560"
+     inkscape:window-height="1380"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:measure-start="-8.25195e-07,39.6875"
+     inkscape:measure-end="39.6875,39.6875"
+     objecttolerance="1"
+     guidetolerance="1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient915">
+      <stop
+         style="stop-color:#e9ddaf;stop-opacity:1;"
+         offset="0"
+         id="stop911" />
+      <stop
+         style="stop-color:#e9ddaf;stop-opacity:0;"
+         offset="1"
+         id="stop913" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient915"
+       id="linearGradient917"
+       x1="-222.79544"
+       y1="35.912651"
+       x2="-222.79544"
+       y2="33.990208"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.57483339,0,15.210007)" />
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <path
+       style="fill:#e9ddaf;fill-opacity:1;stroke:#000000;stroke-width:0.05669291;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -223.99808,35.745489 c 6.1e-4,0.263515 -0.002,0.546173 -0.003,0.782702 -0.0164,1.56127 -0.0331,-0.780827 -0.0314,5.218093 l 2.46875,-0.0625 c -0.006,-5.246649 -0.0431,-0.669144 -0.006,-5.246649 -0.003,-0.171159 -0.005,-0.353662 -0.004,-0.516064 1.4e-4,-0.0203 3.3e-4,-0.04029 5.7e-4,-0.0599"
+       id="path4541"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccsc" />
+    <ellipse
+       style="opacity:1;fill:#030100;fill-opacity:1;stroke:none;stroke-width:0.12144756;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path919"
+       cx="-222.7899"
+       cy="35.415466"
+       rx="1.3313494"
+       ry="0.9612233" />
+    <path
+       style="opacity:1;fill:url(#linearGradient917);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -223.9716,34.885857 c 0,0 0.79075,-0.238693 1.20178,-0.237225 0.39669,0.0015 1.15759,0.237225 1.15759,0.237225 v 0.998683 h -2.35937 z"
+       id="rect878"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cacccc" />
+    <rect
+       style="opacity:1;fill:#e9ddaf;fill-opacity:1;stroke:none;stroke-width:0.15647759;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect924"
+       width="2.3664594"
+       height="0.65582764"
+       x="-223.97418"
+       y="35.868458" />
+  </g>
+</svg>
