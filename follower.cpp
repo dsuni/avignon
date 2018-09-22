@@ -6,16 +6,20 @@ Follower::Follower(Player *p, FollowerType t, OccupationMapper *om) : parent(p),
 	pigs = false;
 	fairy = false;
 	QFile *file;
+	QString filePath(qApp->applicationDirPath());
 	switch(t) {
 	case normal:
 	case big:
-		file = new QFile("graphics/follower.svg"); // Deleted at and of function.
+		filePath.append("/graphics/follower.svg");
+		file = new QFile(filePath); // Deleted at and of function.
 		break;
 	case builder:
-		file = new QFile("graphics/builder.svg");
+		filePath.append("/graphics/builder.svg");
+		file = new QFile(filePath);
 		break;
 	case pig:
-		file = new QFile("graphics/pig.svg");
+		filePath.append("/graphics/pig.svg");
+		file = new QFile(filePath);
 		break;
 	}
 	file->open(QIODevice::ReadOnly);

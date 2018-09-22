@@ -18,6 +18,7 @@
 #include <QDesktopWidget>
 #include <QIcon>
 #include <vector>
+#include <string>
 #include "deck.h"
 #include "table.h"
 #include "player.h"
@@ -49,6 +50,7 @@ private:
 	bool princessAndDragon;
 	bool volcanoPlayed;
 	bool placeFairy;
+	QString *baseDir;
 	QWidget *window;
 	QWidget *tableArea;
 	QWidget *rotateButtons;

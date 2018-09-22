@@ -1,5 +1,5 @@
 /*
-avignon version 0.6.4, released 5 Sep 2018
+avignon version 0.7.0, released 22 Sep 2018
 
 Copyright 2018 Daniel Suni
 

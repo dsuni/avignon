@@ -2,6 +2,7 @@
 #define OCCUPATIONMAPPER_H
 #include <map>
 #include <QSvgRenderer>
+#include <QString>
 
 using namespace std;
 
@@ -12,7 +13,7 @@ private:
 	map<Occupation, QSvgRenderer*> renderers;
 
 public:
-	OccupationMapper();
+	OccupationMapper(QString *baseDir);
 	~OccupationMapper();
 	QSvgRenderer* getRenderer(Occupation o);
 };

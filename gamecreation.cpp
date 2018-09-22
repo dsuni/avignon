@@ -32,7 +32,9 @@ GameCreation::GameCreation(QWidget *parent) {
 	rulesGroup->addButton(edition2);
 	rulesGroup->addButton(edition3);
 	edition1->setChecked(true);
-	QDir dir("decks");
+	QString dirStr = qApp->applicationDirPath();
+	dirStr.append("/decks");
+	QDir dir(dirStr);
 	QStringList filter;
 	filter << "*.xml";
 	dir.setNameFilters(filter);

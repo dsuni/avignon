@@ -2,6 +2,7 @@
 #define FOLLOWER_H
 #include <QFile>
 #include <QByteArray>
+#include <QApplication>
 #include "player.h"
 #include "subtile.h"
 #include "followertype.h"

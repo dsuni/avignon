@@ -1,5 +1,6 @@
 #ifndef GAMECREATION_H
 #define GAMECREATION_H
+#include <QApplication>
 #include <QMainWindow>
 #include <QWidget>
 #include <QLabel>

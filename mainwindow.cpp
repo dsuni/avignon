@@ -17,7 +17,8 @@ MainWindow::MainWindow(QWidget *parent) {
 	volcanoPlayed = false;
 	portalActive = false;
 	placeFairy = false;
-	occupationMapper = new OccupationMapper(); // Deleted in destructor
+	baseDir = new QString(qApp->applicationDirPath()); // Deleted in destructor
+	occupationMapper = new OccupationMapper(baseDir); // Deleted in destructor
 	QRect rec = QApplication::desktop()->screenGeometry();
 	zoom = 4;
 	if (rec.height() < 500) {
@@ -36,6 +37,8 @@ MainWindow::~MainWindow() {
 	deck = NULL;
 	delete occupationMapper;
 	occupationMapper = NULL;
+	delete baseDir;
+	baseDir = NULL;
 	for (int i = 0; i < merchandiseLabels.size(); ++i) {
 		delete merchandiseLabels.at(i);
 	}
@@ -58,13 +61,18 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::start(int x, int y, int p, int r, QStringList *decks, QStringList *rulesList) {
+	QString tempStr;
 	// Set up rules
 	innsAndCathedrals = rulesList->contains(tr("inns_and_cathedrals.xml"));
 	tradersAndBuilders = rulesList->contains(tr("traders_and_builders.xml"));
 	princessAndDragon = rulesList->contains(tr("the_princess_and_the_dragon.xml"));
 	if (princessAndDragon) {
-		dragonPiece = new Piece(tr("graphics/dragon_piece.svg"), 50, 50, 0.8); // Deleted in destructor
-		fairyPiece = new Piece(tr("graphics/fairy.svg"), 150, 150, 0.2); // Deleted in destructor
+		tempStr = *baseDir;
+		tempStr.append("/graphics/dragon_piece.svg");
+		dragonPiece = new Piece(tempStr, 50, 50, 0.8); // Deleted in destructor
+		tempStr = *baseDir;
+		tempStr.append("/graphics/fairy.svg");
+		fairyPiece = new Piece(tempStr, 150, 150, 0.2); // Deleted in destructor
 	}
 	delete rulesList;
 	// Qt's radiobutton index starts from -2 and decreases (WTF?)
@@ -115,7 +123,7 @@ void MainWindow::start(int x, int y, int p, int r, QStringList *decks, QStringLi
 	// Set up deck
 	table = new Table(x, y); // Deleted in destructor
 	table->setExpansions(innsAndCathedrals, princessAndDragon);
-	deck = new Deck(); // Deleted in destructor
+	deck = new Deck(baseDir); // Deleted in destructor
 	bool core = decks->contains("core.xml");
 	bool river = decks->contains("river.xml");
 	bool river2 = decks->contains("river_II.xml");
@@ -125,12 +133,16 @@ void MainWindow::start(int x, int y, int p, int r, QStringList *decks, QStringLi
 	// and the tiles in between mixed - but only amongst themselves.
 	if (river2) {
 		if (river) {
-			deck->loadTiles(tr("decks/river.xml"));
+			tempStr = *baseDir;
+			tempStr.append("/decks/river.xml");
+			deck->loadTiles(tempStr);
 			// Erase last (==lake) tile of river expansion when using both.
 			mem = deck->getSize();
 			deck->eraseTile(mem - 1);
 		}
-		deck->loadTiles(tr("decks/river_II.xml"));
+		tempStr = *baseDir;
+		tempStr.append("/decks/river_II.xml");
+		deck->loadTiles(tempStr);
 		// If loading both, we then need to erase the first (==spring) tile of
 		// the river II deck, which is now where the lake tile was before deletion.
 		// Then we swap the second tile with the river fork tile.
@@ -143,14 +155,18 @@ void MainWindow::start(int x, int y, int p, int r, QStringList *decks, QStringLi
 		mem = deck->getSize();
 	}
 	else if (river) {
-		deck->loadTiles(tr("decks/river.xml"));
+		tempStr = *baseDir;
+		tempStr.append("/decks/river.xml");
+		deck->loadTiles(tempStr);
 		// When using river only, shuffle all between 1st and last.
 		deck->shuffleDeck(1, deck->getSize() - 2);
 		mem = deck->getSize();
 	}
 	// If neither expansion is loaded we load core first because of starting tile.
 	else if (core) {
-		deck->loadTiles(tr("decks/core.xml"));
+		tempStr = *baseDir;
+		tempStr.append("/decks/core.xml");
+		deck->loadTiles(tempStr);
 	}
 	for (int i = 0; i < decks->size(); ++i) {
 		// These are always handled above.
@@ -161,8 +177,9 @@ void MainWindow::start(int x, int y, int p, int r, QStringList *decks, QStringLi
 		if (decks->at(i) == "core.xml" && !river && !river2) {
 			continue;
 		}
-		QString deckDir("decks/");
-		deck->loadTiles(deckDir.append(decks->at(i)));
+		tempStr = *baseDir;
+		tempStr.append("/decks/");
+		deck->loadTiles(tempStr.append(decks->at(i)));
 	}
 	// Shuffle non-river pieces among themselves
 	if (river || river2) {
@@ -172,7 +189,7 @@ void MainWindow::start(int x, int y, int p, int r, QStringList *decks, QStringLi
 	else {
 		deck->shuffleDeck(1);
 	}
-	for (int i = 0; i < deck->getSize();++i) {
+	for (int i = 0; i < deck->getSize(); ++i) {
 		deck->getTile(i)->launchSetup();
 	}
 	delete decks;
@@ -189,7 +206,9 @@ void MainWindow::start(int x, int y, int p, int r, QStringList *decks, QStringLi
 	currentDraw = new QLabel(window);
 	tileCounter = new QLabel(window);
 	// Tile backs image
-	QSvgRenderer renderer(tr("graphics/tile_back.svg"));
+	tempStr = *baseDir;
+	tempStr.append("/graphics/tile_back.svg");
+	QSvgRenderer renderer(tempStr);
 	QImage img(tileSizes[zoom], tileSizes[zoom], IMG_FORMAT);
 	QPainter painter(&img);
 	renderer.render(&painter);
@@ -198,17 +217,23 @@ void MainWindow::start(int x, int y, int p, int r, QStringList *decks, QStringLi
 	currentDraw->setPixmap(*backDrawPile);
 	currentDraw->setAlignment(Qt::AlignTop);
 	// Merchandise images
-	QSvgRenderer renderer1(tr("graphics/barrel.svg"));
+	tempStr = *baseDir;
+	tempStr.append("/graphics/barrel.svg");
+	QSvgRenderer renderer1(tempStr);
 	QImage img1(20, 20, IMG_FORMAT);
 	QPainter painter1(&img1);
 	renderer1.render(&painter1);
 	barrelImg = new QPixmap(QPixmap::fromImage(img1)); // Deleted in destructor
-	QSvgRenderer renderer2(tr("graphics/barley.svg"));
+	tempStr = *baseDir;
+	tempStr.append("/graphics/barley.svg");
+	QSvgRenderer renderer2(tempStr);
 	QImage img2(20, 20, IMG_FORMAT);
 	QPainter painter2(&img2);
 	renderer2.render(&painter2);
 	barleyImg = new QPixmap(QPixmap::fromImage(img2)); // Deleted in destructor
-	QSvgRenderer renderer3(tr("graphics/cloth.svg"));
+	tempStr = *baseDir;
+	tempStr.append("/graphics/cloth.svg");
+	QSvgRenderer renderer3(tempStr);
 	QImage img3(20, 20, IMG_FORMAT);
 	QPainter painter3(&img3);
 	renderer3.render(&painter3);
@@ -239,24 +264,32 @@ void MainWindow::start(int x, int y, int p, int r, QStringList *decks, QStringLi
 	draw = new QPushButton(tr("Draw tile"), window);
 	connect(draw, SIGNAL(clicked()), this, SLOT(drawTile()));
 	rotateCW = new QPushButton(window);
-	QPixmap rotateCWPxm("graphics/rotate_cw.svg");
+	tempStr = *baseDir;
+	tempStr.append("/graphics/rotate_cw.svg");
+	QPixmap rotateCWPxm(tempStr);
 	QIcon rotateCWIcon(rotateCWPxm);
 	rotateCW->setIcon(rotateCWIcon);
 	rotateCW->setEnabled(false);
 	connect(rotateCW, SIGNAL(clicked()), this, SLOT(rotateClockwise()));	
 	rotateCCW = new QPushButton(window);
-	QPixmap rotateCCWPxm("graphics/rotate_ccw.svg");
+	tempStr = *baseDir;
+	tempStr.append("/graphics/rotate_ccw.svg");
+	QPixmap rotateCCWPxm(tempStr);
 	QIcon rotateCCWIcon(rotateCCWPxm);
 	rotateCCW->setIcon(rotateCCWIcon);
 	rotateCCW->setEnabled(false);
 	connect(rotateCCW, SIGNAL(clicked()), this, SLOT(rotateCounterClockwise()));
 	zoomInButton = new QPushButton(window);
-	QPixmap zoomInPxm("graphics/zoom_in.svg");
+	tempStr = *baseDir;
+	tempStr.append("/graphics/zoom_in.svg");
+	QPixmap zoomInPxm(tempStr);
 	QIcon zoomInIcon(zoomInPxm);
 	zoomInButton->setIcon(zoomInIcon);
 	connect(zoomInButton, SIGNAL(clicked()), this, SLOT(zoomIn()));
 	zoomOutButton = new QPushButton(window);
-	QPixmap zoomOutPxm("graphics/zoom_out.svg");
+	tempStr = *baseDir;
+	tempStr.append("/graphics/zoom_out.svg");
+	QPixmap zoomOutPxm(tempStr);
 	QIcon zoomOutIcon(zoomOutPxm);
 	zoomOutButton->setIcon(zoomOutIcon);
 	connect(zoomOutButton, SIGNAL(clicked()), this, SLOT(zoomOut()));
@@ -728,7 +761,9 @@ void MainWindow::restoreFollowerToPlayer(Follower *f) {
 }
 
 void MainWindow::redrawTable() {
-	QSvgRenderer renderer(tr("graphics/tile_back.svg"));
+	QString tempStr(*baseDir);
+	tempStr.append("/graphics/tile_back.svg");
+	QSvgRenderer renderer(tempStr);
 	QImage img(tileSizes[zoom], tileSizes[zoom], IMG_FORMAT);
 	QPainter painter(&img);
 	renderer.render(&painter);

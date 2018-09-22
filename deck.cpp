@@ -1,5 +1,7 @@
 #include "deck.h"
 
+Deck::Deck(QString *base) : baseDir(base) {}
+
 Deck::~Deck() {
 	for (int i = tiles.size() - 1; i >= 0; --i) {
 		delete tiles.at(i);
@@ -63,7 +65,10 @@ void Deck::loadTiles(QString filename) {
 					map<QString, QSvgRenderer*>::const_iterator it = baseImages.find(attrVal);
 					if (it == baseImages.end()) {
 						// If not, load it now.
-						rend = new QSvgRenderer(attrVal); // Deleted in destructor
+						QString tempStr(*baseDir);
+						tempStr.append("/");
+						tempStr.append(attrVal);
+						rend = new QSvgRenderer(tempStr); // Deleted in destructor
 						baseImages[attrVal] = rend;
 					}
 					else {

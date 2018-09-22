@@ -20,8 +20,10 @@ class Deck {
 private:
 	vector<Tile*> tiles;
 	map<QString, QSvgRenderer*> baseImages;
+	QString *baseDir;
 
 public:
+	Deck(QString *base);
 	~Deck();
 	void loadTiles(QString filename);
 	void shuffleDeck();

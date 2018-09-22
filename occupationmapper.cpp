@@ -1,11 +1,19 @@
 #include "occupationmapper.h"
 
-OccupationMapper::OccupationMapper() {
+OccupationMapper::OccupationMapper(QString *baseDir) {
 	renderers[not_applicable] = new QSvgRenderer();
-	renderers[knight] = new QSvgRenderer(QObject::tr("graphics/knight.svg"));
-	renderers[robber] = new QSvgRenderer(QObject::tr("graphics/robber.svg"));
-	renderers[farmer] = new QSvgRenderer(QObject::tr("graphics/farmer.svg"));
-	renderers[monk] = new QSvgRenderer(QObject::tr("graphics/monk.svg"));
+	QString tempStr(*baseDir);
+	tempStr.append("/graphics/knight.svg");
+	renderers[knight] = new QSvgRenderer(tempStr);
+	tempStr = *baseDir;
+	tempStr.append("/graphics/robber.svg");
+	renderers[robber] = new QSvgRenderer(tempStr);
+	tempStr = *baseDir;
+	tempStr.append("/graphics/farmer.svg");
+	renderers[farmer] = new QSvgRenderer(tempStr);
+	tempStr = *baseDir;
+	tempStr.append("/graphics/monk.svg");
+	renderers[monk] = new QSvgRenderer(tempStr);
 }
 
 OccupationMapper::~OccupationMapper() {
