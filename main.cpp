@@ -19,14 +19,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "mainwindow.h"
 #include "gamecreation.h"
+#include "networksetup.h"
 #include <QApplication>
 #include <QObject>
 
 int main(int argc, char *argv[]) {
 	QApplication app(argc, argv);
-	MainWindow mw;
-	GameCreation gc;
-	gc.show();
-	QObject::connect(&gc, SIGNAL(startGame(int, int, int, int, QStringList*, QStringList*)), &mw, SLOT(start(int, int, int, int, QStringList*, QStringList*)));
+	//MainWindow mw;
+	NetworkSetup ns;
+	ns.show();
+	//GameCreation gc;
+	//gc.show();
+	//QObject::connect(&gc, SIGNAL(startGame(int, int, int, int, QStringList*, QStringList*)), &mw, SLOT(start(int, int, int, int, QStringList*, QStringList*)));
 	return app.exec();
 }
