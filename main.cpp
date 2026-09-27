@@ -1,7 +1,7 @@
 /*
-avignon version 0.7.0, released 22 Sep 2018
+avignon version 0.8.0, released 27 Sep 2026
 
-Copyright 2018 Daniel Suni
+Copyright 2018,2026 Daniel Suni
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

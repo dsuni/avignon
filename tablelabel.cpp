@@ -3,7 +3,7 @@
 TableLabel::TableLabel(QWidget *parent, Qt::WindowFlags f): QLabel(parent) {}
 
 void TableLabel::mousePressEvent(QMouseEvent *event) {
-	const QPoint p = event->pos();
+	const QPoint p = event->position().toPoint();
 	emit clicked(p);
 }
 

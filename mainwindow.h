@@ -15,7 +15,7 @@
 #include <QInputDialog>
 #include <QMessageBox>
 #include <QApplication>
-#include <QDesktopWidget>
+#include <QScreen>
 #include <QIcon>
 #include <vector>
 #include <string>

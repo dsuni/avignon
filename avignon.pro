@@ -2,7 +2,7 @@ TEMPLATE = app
 TARGET = avignon
 DEPENDPATH += .
 INCLUDEPATH += .
-QT += core gui svg
+QT += core gui widgets svg
 
 # Input
 HEADERS += deck.h subtile.h table.h terrain.h tile.h mainwindow.h tileimage.h gamecreation.h tablelabel.h player.h follower.h followertype.h followerplacer.h imagelayer.h occupationmapper.h const.h piece.h dragonmover.h

@@ -1,5 +1,14 @@
 #include "mainwindow.h"
 
+static QPixmap svgIcon(const QString &path) {
+	QSvgRenderer renderer(path);
+	QPixmap pixmap(renderer.defaultSize());
+	pixmap.fill(Qt::transparent);
+	QPainter painter(&pixmap);
+	renderer.render(&painter);
+	return pixmap;
+}
+
 MainWindow::MainWindow(QWidget *parent) {
 	table = NULL;
 	deck = NULL;
@@ -19,7 +28,7 @@ MainWindow::MainWindow(QWidget *parent) {
 	placeFairy = false;
 	baseDir = new QString(qApp->applicationDirPath()); // Deleted in destructor
 	occupationMapper = new OccupationMapper(baseDir); // Deleted in destructor
-	QRect rec = QApplication::desktop()->screenGeometry();
+	QRect rec = QGuiApplication::primaryScreen()->geometry();
 	zoom = 4;
 	if (rec.height() < 500) {
 		zoom = 2;
@@ -266,31 +275,27 @@ void MainWindow::start(int x, int y, int p, int r, QStringList *decks, QStringLi
 	rotateCW = new QPushButton(window);
 	tempStr = *baseDir;
 	tempStr.append("/graphics/rotate_cw.svg");
-	QPixmap rotateCWPxm(tempStr);
-	QIcon rotateCWIcon(rotateCWPxm);
+	QIcon rotateCWIcon(svgIcon(tempStr));
 	rotateCW->setIcon(rotateCWIcon);
 	rotateCW->setEnabled(false);
 	connect(rotateCW, SIGNAL(clicked()), this, SLOT(rotateClockwise()));	
 	rotateCCW = new QPushButton(window);
 	tempStr = *baseDir;
 	tempStr.append("/graphics/rotate_ccw.svg");
-	QPixmap rotateCCWPxm(tempStr);
-	QIcon rotateCCWIcon(rotateCCWPxm);
+	QIcon rotateCCWIcon(svgIcon(tempStr));
 	rotateCCW->setIcon(rotateCCWIcon);
 	rotateCCW->setEnabled(false);
 	connect(rotateCCW, SIGNAL(clicked()), this, SLOT(rotateCounterClockwise()));
 	zoomInButton = new QPushButton(window);
 	tempStr = *baseDir;
 	tempStr.append("/graphics/zoom_in.svg");
-	QPixmap zoomInPxm(tempStr);
-	QIcon zoomInIcon(zoomInPxm);
+	QIcon zoomInIcon(svgIcon(tempStr));
 	zoomInButton->setIcon(zoomInIcon);
 	connect(zoomInButton, SIGNAL(clicked()), this, SLOT(zoomIn()));
 	zoomOutButton = new QPushButton(window);
 	tempStr = *baseDir;
 	tempStr.append("/graphics/zoom_out.svg");
-	QPixmap zoomOutPxm(tempStr);
-	QIcon zoomOutIcon(zoomOutPxm);
+	QIcon zoomOutIcon(svgIcon(tempStr));
 	zoomOutButton->setIcon(zoomOutIcon);
 	connect(zoomOutButton, SIGNAL(clicked()), this, SLOT(zoomOut()));
 	controlLayout->addStretch();
